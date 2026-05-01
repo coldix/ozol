@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <!--
+    Web site design by: Colin Dixon BSc, DipEd, Cert IV TAE
+    Helping businesses and communities Australia-wide, from Derby to Mallacoota.
+    Phone: 0419 415 000
+    Email: col@ozol.org
+    Website: https://coota.au
+    Date: 5 August 2025
+    Version: 1.8.06
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Phone Reception - A Historic Case Study | Col Dixon</title>
+    <meta name="description" content="A historic (2012) case study on achieving remote internet, now contrasted with modern solutions like Starlink.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com.au/remote-internet.html">
+    <meta property="og:title" content="Remote Phone Reception - A Historic Case Study | Col Dixon">
+    <meta property="og:description" content="A historic (2012) case study on achieving remote internet, now contrasted with modern solutions like Starlink.">
+    <meta property="og:image" content="https://example.com.au/pics/ri2012-01.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://example.com.au/remote-internet.html">
+    <meta property="twitter:title" content="Remote Phone Reception - A Historic Case Study | Col Dixon">
+    <meta property="twitter:description" content="A historic (2012) case study on achieving remote internet, now contrasted with modern solutions like Starlink.">
+    <meta property="twitter:image" content="https://example.com.au/pics/ri2012-01.jpg">
+
+    <style>
+        :root {
+            --glass-bg-dark: rgba(10, 25, 41, 0.6);
+            --glass-border-dark: rgba(255, 255, 255, 0.1);
+            --text-dark: #e5e5e5;
+            --glass-bg-light: rgba(255, 255, 255, 0.6);
+            --glass-border-light: rgba(0, 0, 0, 0.1);
+            --text-light: #1a1a1a;
+            --accent-color: #3498db;
+            --accent-hover: #2980b9;
+            --transition-speed: 0.3s;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-image: url('pics/ri2012-01.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            transition: color var(--transition-speed);
+        }
+        body.light-theme { color: var(--text-light); }
+        body.dark-theme { color: var(--text-dark); }
+
+        .page-wrapper { max-width: 960px; margin: 0 auto; padding: 2rem 1rem; }
+
+        .card-style {
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid;
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            transition: background-color var(--transition-speed), border-color var(--transition-speed);
+        }
+        .light-theme .card-style { background-color: var(--glass-bg-light); border-color: var(--glass-border-light); }
+        .dark-theme .card-style { background-color: var(--glass-bg-dark); border-color: var(--glass-border-dark); }
+        
+        header { position: relative; text-align: center; }
+        footer { text-align: center; }
+        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        h2 { font-size: 1.2rem; font-weight: 400; opacity: 0.9; margin-bottom: 1rem; }
+        h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+        h4 { margin-bottom: 0.5rem; }
+        p { margin-bottom: 1rem; }
+        a { color: var(--accent-color); text-decoration: none; }
+        a:hover { color: var(--accent-hover); text-decoration: underline; }
+
+        #theme-toggle {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: 1px solid transparent;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 8px;
+            line-height: 1;
+        }
+        .light-theme #theme-toggle { color: var(--text-light); }
+        .dark-theme #theme-toggle { color: var(--text-dark); }
+        #theme-toggle:hover { border-color: currentColor; }
+
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+        .grid-item { padding: 1rem; border-radius: 8px; }
+        .light-theme .grid-item { background-color: rgba(255,255,255,0.2); }
+        .dark-theme .grid-item { background-color: rgba(0,0,0,0.2); }
+        .grid-item.image-item { padding: 0; overflow: hidden; }
+
+        .image-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+        .image-link img {
+            width: 100%; height: auto; display: block; border-radius: 8px;
+            cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .grid-item .image-link img { border-radius: 8px; }
+        .image-link:hover img { transform: scale(1.03); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+
+        .footer-content { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 0.5rem 1rem; }
+        .footer-content p { margin-bottom: 0; }
+
+        .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+        
+        #image-modal { display: none; position: fixed; z-index: 2000; padding-top: 50px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.9); justify-content: center; align-items: center; }
+        .modal-image { margin: auto; display: block; max-width: 90%; max-height: 85vh; border: 3px solid white; border-radius: 4px; }
+        .image-modal-close { position: absolute; top: 15px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; transition: 0.3s; cursor: pointer; }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person", "name": "Col Dixon", "url": "https://example.com.au/remote-internet.html",
+          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://example.com.au/remote-internet.html" }
+        },
+        {
+          "@type": "Place", "name": "Osprey Bay, Cape Range National Park",
+          "address": { "@type": "PostalAddress", "addressLocality": "Cape Range National Park", "addressRegion": "WA", "addressCountry": "AU" }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <div class="page-wrapper">
+        <header class="card-style">
+            <button id="theme-toggle" title="Toggle light/dark theme"></button>
+            <h1>Remote Phone Reception</h1>
+            <h2>A Historic Case Study on Achieving Signal in Cape Range National Park (2012)</h2>
+        </header>
+
+        <main>
+            <section class="card-style" aria-labelledby="context-heading">
+                <h3 id="context-heading">A Note on Modern Technology: Starlink</h3>
+                <p>It's important to view this project in its historical context. When this was done in 2012, solutions like this were critical for remote connectivity. Today, thanks to Elon Musk and the advent of services like Starlink, achieving high-speed internet in remote locations has become vastly simpler.</p>
+                <p>I have Starlink at home myself, and it's a game-changer, making complex antenna setups like this largely a thing of the past. I cannot think why anyone would do this now.</p>
+            </section>
+
+            <section class="card-style" aria-labelledby="tech-points-heading">
+                <h3 id="tech-points-heading">Key Technical Points & The Result</h3>
+                <div class="card-grid">
+                    <div class="grid-item"><h4>The Challenge</h4><p>Extremely poor signal due to a rapid 300m elevation drop over 23km from the transmitter.</p></div>
+                    <div class="grid-item"><h4>The Expert</h4><p>Consultation with Doug at Telco Antennas Pty Ltd, who identified the overrated "22dBi" antenna issue.</p></div>
+                    <div class="grid-item"><h4>The Solution</h4><p>A properly rated 14dBi fully welded yagi antenna, with a critical focus on maximising mounting height.</p></div>
+                    <div class="grid-item"><h4>The Result</h4><p>A successful and stable 4-bar signal for reliable phone and internet connectivity.</p></div>
+                    <div class="grid-item image-item">
+                        <a href="pics/ri2012-01.jpg" class="image-link" title="Click to enlarge">
+                           <img src="pics/ri2012-t-01.jpg" alt="Mercedes van with caravan and antenna mast at sunset" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="card-style" aria-labelledby="evidence-heading">
+                <h3 id="evidence-heading">Visual Evidence & Location Data</h3>
+                <p>These images from Google Earth illustrate the challenging terrain. Click any image to enlarge.</p>
+                <div class="image-gallery">
+                    <a href="pics/ri2012-02.jpg" class="image-link"><img src="pics/ri2012-t-02.jpg" alt="Aerial view of Osprey Bay" loading="lazy"></a>
+                    <a href="pics/ri2012-03.jpg" class="image-link"><img src="pics/ri2012-t-03.jpg" alt="Aerial view showing the signal path" loading="lazy"></a>
+                    <a href="pics/ri2012-04.jpg" class="image-link"><img src="pics/ri2012-t-04.jpg" alt="Elevation profile graph" loading="lazy"></a>
+                </div>
+            </section>
+
+            <section class="card-style" aria-labelledby="advice-heading">
+                 <h3 id="advice-heading" class="visually-hidden">Critical Technical Advice from 2012</h3>
+                <blockquote>
+                    <p>"Signal is quite poor in the area due to the rapid descent of elevation... height is absolutely critical in achieving a good signal. So rather than spending money and using a thicker grade of cable or a larger antenna the most economical thing you can do is find a way to raise the antenna higher."</p>
+                    <footer>— Doug, Telco Antennas Pty Ltd</footer>
+                </blockquote>
+            </section>
+        </main>
+
+        <footer class="card-style">
+            <div class="footer-content">
+                <p>&copy; <span id="copyright-year"></span> Col Dixon</p>
+                <p>|</p>
+                <p>Site by <a href="https://oze.au" target="_blank" rel="noopener noreferrer">OzOnLine</a></p>
+                <p>|</p>
+                <p><a href="https://ozol.org" target="_blank" rel="noopener noreferrer">OzOL.org</a></p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Image Lightbox Modal -->
+    <div id="image-modal" onclick="closeImageModal()"><span class="image-modal-close" onclick="closeImageModal()">&times;</span><img class="modal-image" id="full-image" src="" alt="Enlarged view"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const body = document.body;
+            const themeToggleButton = document.getElementById('theme-toggle');
+            
+            const openImageModal = (imageUrl) => { document.getElementById('full-image').src = imageUrl; document.getElementById('image-modal').style.display = 'flex'; };
+            const closeImageModal = () => document.getElementById('image-modal').style.display = 'none';
+            const updateCopyrightYear = () => { const el = document.getElementById('copyright-year'); if(el) el.textContent = new Date().getFullYear(); };
+            
+            const updateThemeButton = (theme) => {
+                if (themeToggleButton) themeToggleButton.textContent = theme === 'light' ? '🌙' : '💡';
+            };
+
+            const toggleTheme = () => {
+                const newTheme = body.classList.contains('dark-theme') ? 'light' : 'dark';
+                body.classList.remove('dark-theme', 'light-theme');
+                body.classList.add(newTheme + '-theme');
+                localStorage.setItem('theme', newTheme);
+                updateThemeButton(newTheme);
+            };
+
+            const initializeTheme = () => {
+                const savedTheme = localStorage.getItem('theme') || 'dark';
+                body.classList.add(savedTheme + '-theme');
+                updateThemeButton(savedTheme);
+            };
+
+            if (themeToggleButton) themeToggleButton.addEventListener('click', toggleTheme);
+            
+            document.querySelectorAll('.image-link').forEach(link => link.addEventListener('click', (e) => { e.preventDefault(); openImageModal(link.href); }));
+            document.getElementById('image-modal').addEventListener('click', (e) => { if(e.target === e.currentTarget) closeImageModal(); });
+            
+            initializeTheme();
+            updateCopyrightYear();
+        });
+    </script>
+</body>
+</html>```
+

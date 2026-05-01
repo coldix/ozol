@@ -1,0 +1,7 @@
+# File: robots.txt
+# Date: 01 May 2026 23:38 AEST
+# Version: v01
+User-agent: *
+Allow: /
+
+Sitemap: https://ozol.org/sitemap.xml
