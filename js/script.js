@@ -3,8 +3,8 @@
     Website: ozol.org — OZ On Line
     Description: Aurora theme toggle, scroll reveals, motes, card glow,
                  image + enquiry modals, retro CRT terminal typewriter.
-    Version: 2.0.0
-    Date: 24 Jun 2026 AEST
+    Version: 2.0.1
+    Date: 24 Aug 2026 AEST
     Author: Colin Dixon + Claude Opus 4.8
 */
 
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const yr = document.getElementById('copyright-year');
     if (yr) yr.textContent = new Date().getFullYear();
     const stamp = document.getElementById('build-stamp');
-    if (stamp) stamp.textContent = 'v2.0.0 · 24 Jun 2026';
+    if (stamp) stamp.textContent = 'v2.0.1 · 24 Aug 2026';
 
     // --- Scroll reveal ---
     const revealEls = document.querySelectorAll('.reveal');
